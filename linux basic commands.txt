@@ -1,0 +1,28 @@
+if cockpit do not work after cloning:
+	$ rm -rfv /etc/cockpit/ws-certs.d/0-self-signed.cert
+	$ systemctl restart cockpit.socket
+	
+Add or Remove port into firewall:
+	firewall-cmd --zone=public --permanent --add-port=2377/tcp
+	firewall-cmd --reload
+	firewall-cmd --list-all
+
+	firewall-cmd --zone=public --permanent --remove-port 9000/tcp
+	firewall-cmd --reload
+	firewall-cmd --list-all --zone=public
+
+check open ports:
+	1. nmap
+		- download and upload nmap latest version to server
+		- install nmap 
+			$ rpm -ivh --nodeps ./nmap-7.80-1.x86_64.rpm
+		$ nmap -p 9000 192.168.10.100 -Pn
+	
+	2. TNC through windows powershell
+		- TNC 192.168.10.100 -port 9090
+	
+	3. telnet through windows powershell or command prompt
+		- telnet 192.168.10.110 9000
+		
+Reference: 
+nmap: https://phoenixnap.com/kb/nmap-command-linux-examples#:~:text=Nmap%2C%20or%20Network%20Mapper%2C%20is,and%20scan%20for%20open%20ports.

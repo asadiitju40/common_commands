@@ -1,0 +1,29 @@
+docker run --name=mysql-db --env="MYSQL_ROOT_PASSWORD=db_pass123" mysql
+docker run --name=mysql-db -d -v /opt/data:/var/lib/mysql --env="MYSQL_ROOT_PASSWORD=db_pass123" mysql
+
+Dockerfile commands:
+
+RUN:
+	Lets you execute commands inside of your Docker image. 
+	These commands get executed once at build time and get written into your Docker image as a new layer.
+	
+CMD:
+	Lets you define a default command to run when your container starts. if multiple CMD presents on last one works by default!
+	CMD can overwritten with execution command.
+	
+Build Command:
+	docker build -t image_tag -f Dockerfile .
+
+
+TROUBLESHOOT:
+
+Resolve Container DNS Problem:
+
+	docker run busybox ping www.juniv.edu
+	cat /etc/resolv.conf
+	nmcli dev show | grep 'IP4.DNS'
+	ip link show
+	firewall-cmd --permanent --zone=trusted --add-interface=docker0
+	firewall-cmd --reload
+	
+docker pull tomcat:8.5.57-jdk11-openjdk
