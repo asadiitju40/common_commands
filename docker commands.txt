@@ -27,3 +27,5 @@ Resolve Container DNS Problem:
 	firewall-cmd --reload
 	
 docker pull tomcat:8.5.57-jdk11-openjdk
+Install docker swam:
+	https://www.linuxtechi.com/install-configure-docker-swarm-mode-centos7-rhel7/
