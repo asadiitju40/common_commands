@@ -23,6 +23,10 @@ check open ports:
 	
 	3. telnet through windows powershell or command prompt
 		- telnet 192.168.10.110 9000
-		
+---------------------REDHAT-------------------
+Create a local repo:
+	https://www.itzgeek.com/how-tos/linux/centos-how-tos/how-to-create-local-yum-repository-on-rhel-8-using-dvd.html
+
+
 Reference: 
 nmap: https://phoenixnap.com/kb/nmap-command-linux-examples#:~:text=Nmap%2C%20or%20Network%20Mapper%2C%20is,and%20scan%20for%20open%20ports.
