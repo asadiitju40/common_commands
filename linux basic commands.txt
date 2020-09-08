@@ -35,6 +35,7 @@ append these into "/etc/hosts" file:
 192.168.10.102    workernode2.example.com       workernode2
 192.168.10.110    registry.example.com        	registry
 
-
+check java location:
+	$ readlink -f $(which java)
 Reference: 
 nmap: https://phoenixnap.com/kb/nmap-command-linux-examples#:~:text=Nmap%2C%20or%20Network%20Mapper%2C%20is,and%20scan%20for%20open%20ports.
