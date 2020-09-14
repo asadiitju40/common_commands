@@ -1,0 +1,23 @@
+enable EPEL:
+add disk persistantent at boot time and mount it /u01
+
+Enable X11 forwarding for centos 8:
+    Enable X11 forwarding:
+    dnf config-manager --enablerepo=PowerTools
+    dnf install xorg-x11-apps
+    yum install  xorg-x11-server-Xorg xorg-x11-xauth xorg-x11-apps -y
+    yum install libXext.x86_64
+    yum install libXrender.x86_64
+    yum install libXtst.x86_64
+    systemctl restart sshd
+
+Enable X11 forwarding for centos 7:
+    yum install  xorg-x11-server-Xorg xorg-x11-xauth xorg-x11-apps -y
+   
+Set display:
+   DISPLAY=192.168.0.105:0.0; export DISPLAY  ## 192.168.0.105 is host OS IP
+ 
+Ref:
+  https://oracle-base.com/articles/12c/weblogic-installation-on-oracle-linux-6-and-7-1221
+https://www.centlinux.com/2018/12/install-oracle-weblogic-12c-server-on-centos-7.html
+http://www.jeepxie.net/article/756770.html
