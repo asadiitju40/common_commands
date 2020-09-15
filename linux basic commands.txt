@@ -27,6 +27,16 @@ check open ports:
 Create a local repo:
 	https://www.itzgeek.com/how-tos/linux/centos-how-tos/how-to-create-local-yum-repository-on-rhel-8-using-dvd.html
 
+Set java environment variable:
+	$ vi /etc/profile.d/java.sh 	# for setting global variables
+	# Setting JAVA Environment variables
+	$ export JAVA_HOME=$(dirname $(dirname $(readlink $(readlink $(which javac)))))
+	$ export JRE_HOME="$(dirname $(dirname $(readlink $(readlink $(which javac)))))/jre"
+	$ export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin
+	$ export CLASSPATH=.:$JAVA_HOME/jre/lib:$JAVA_HOME/lib:$JAVA_HOME/lib/tools.jar
+
+	https://computingforgeeks.com/how-to-set-java_home-on-centos-fedora-rhel/
+
 DNS entry:
 	$ vi /etc/hosts
 append these into "/etc/hosts" file:
