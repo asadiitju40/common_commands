@@ -18,6 +18,9 @@ Set display:
    DISPLAY=192.168.0.105:0.0; export DISPLAY  ## 192.168.0.105 is host OS IP
  
 Ref:
+    enable EPEL centos*:
+        https://www.cyberciti.biz/faq/how-to-enable-and-install-epel-repo-on-centos-8-x/
+    
   https://oracle-base.com/articles/12c/weblogic-installation-on-oracle-linux-6-and-7-1221
 https://www.centlinux.com/2018/12/install-oracle-weblogic-12c-server-on-centos-7.html
 http://www.jeepxie.net/article/756770.html
