@@ -1,3 +1,4 @@
+
 if cockpit do not work after cloning:
 	$ rm -rfv /etc/cockpit/ws-certs.d/0-self-signed.cert
 	$ systemctl restart cockpit.socket
@@ -27,6 +28,8 @@ check open ports:
 Create a local repo:
 	https://www.itzgeek.com/how-tos/linux/centos-how-tos/how-to-create-local-yum-repository-on-rhel-8-using-dvd.html
 
+Enable EPEL Repos:
+	https://www.cyberciti.biz/faq/how-to-enable-and-install-epel-repo-on-centos-8-x/
 Set java environment variable:
 	$ vi /etc/profile.d/java.sh 	# for setting global variables
 	# Setting JAVA Environment variables
