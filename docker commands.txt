@@ -1,6 +1,8 @@
 docker run --name=mysql-db --env="MYSQL_ROOT_PASSWORD=db_pass123" mysql
 docker run --name=mysql-db -d -v /opt/data:/var/lib/mysql --env="MYSQL_ROOT_PASSWORD=db_pass123" mysql
 
+Check container base OS info:
+	cat /etc/*release*
 Dockerfile commands:
 
 RUN:
