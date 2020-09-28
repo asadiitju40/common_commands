@@ -31,3 +31,5 @@ Resolve Container DNS Problem:
 docker pull tomcat:8.5.57-jdk11-openjdk
 Install docker swam:
 	https://www.linuxtechi.com/install-configure-docker-swarm-mode-centos7-rhel7/
+Resolve docker 19 dependencies centos 8
+	http://blog.nashcom.de/nashcomblog.nsf/dx/install-docker-19.03-on-centos-8.htm
