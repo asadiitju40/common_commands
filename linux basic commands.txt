@@ -11,6 +11,19 @@ Add or Remove port into firewall:
 	firewall-cmd --zone=public --permanent --remove-port 9000/tcp
 	firewall-cmd --reload
 	firewall-cmd --list-all --zone=public
+	
+
+Creating a custom firewall zone and some configuration:
+login as root:
+
+firewall-cmd --new-zone=docker-k8s --permanent
+firewall-cmd --zone=docker-k8s --set-target=ACCEPT --permanent
+firewall-cmd --zone=docker-k8s --add-interface=docker0 --permanent
+firewall-cmd --zone=docker-k8s --add-source=172.18.0.0/24 --permanent
+firewall-cmd --add-port=6603/tcp --zone=docker-k8s --permanent
+firewall-cmd --reload
+firewall-cmd --list-all --zone=docker-k8s
+
 
 check open ports:
 	1. nmap
