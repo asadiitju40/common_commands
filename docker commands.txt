@@ -28,6 +28,15 @@ Resolve Container DNS Problem:
 	firewall-cmd --permanent --zone=trusted --add-interface=docker0
 	firewall-cmd --reload
 	
+To transport docker images:
+	In Source server:
+		docker save -o ~/ubuntu_latest.tar  ubuntu:latest
+		scp ubuntu_latest.tar dpr@192.168.10.10:/home/dpr
+
+	In destination server:
+		docker load -i ubuntu_latest.tar
+
+	
 docker pull tomcat:8.5.57-jdk11-openjdk
 Install docker swam:
 	https://www.linuxtechi.com/install-configure-docker-swarm-mode-centos7-rhel7/
